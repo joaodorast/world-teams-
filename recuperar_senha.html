@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatoPhew | Recuperar Senha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="tatophew_logo.png-removebg-preview.png" alt="Logo TatoNephew" class="tatophew_logo_recuperar">
+            <nav class="button-container">
+                <a href="cadastro.html" class="cadastrar-btn">Cadastre-se</a>
+                <a href="login.html" class="login-btn">Logar-se</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h2>Recuperar Senha</h2>
+            <p>Insira seu endereço de email e enviaremos um código de verificação para redefinir sua senha.</p>
+            <form action="processar_recuperar_senha.php" method="POST">
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <button type="submit">Enviar Código de Verificação</button>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 TatoNephew. Nós é computeiro</p>
+        </footer>
+    </div>
+</body>
+</html>

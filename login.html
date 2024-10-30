@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatoPhew | Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            background-color: #28a745;
+            color: white;
+            padding: 0 20px;
+            position: relative; 
+        }
+
+        .tatophew_logo_login {
+            max-height: 70px;
+            margin: 0 auto; 
+        }
+
+        .button-container {
+            position: absolute; 
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #28a745;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        .cadastrar-btn, .login-btn {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background-color: transparent;
+            transition: background-color 0.3s;
+        }
+
+        .cadastrar-btn:hover, .login-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 22px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="tatophew_logo.png-removebg-preview.png" alt="Logo da empresa TatoNephew" class="tatophew_logo_login">
+            <nav class="button-container">
+                <a href="cadastro.html" class="cadastrar-btn">Cadastre-se</a>
+                <a href="login.html" class="login-btn">Logar-se</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="login-form">
+                <h2>Faça seu Login</h2>
+                <form action="naosei ainda mas vou decidir algo, odeio java" method="POST"> 
+                    <div>
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" required minlength="6">
+                        <input type="checkbox" onclick="MostrarSenha()"> Mostrar Senha
+                    </div>
+                    <button type="submit">Entrar</button>
+                </form>
+                <p>Esqueceu sua senha? <a href="recuperar_senha.html">Recuperar senha</a></p> 
+            </div>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 TatoNephew. Nós é computeiro</p>
+        </footer>
+    </div>
+
+    <script>
+        function MostrarSenha() {
+            var senha = document.getElementById("senha");
+            senha.type = senha.type === "password" ? "text" : "password";
+        }
+    </script>
+</body>
+</html>

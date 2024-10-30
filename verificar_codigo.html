@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TatoPhew | Verificar Código</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="tatophew_logo.png" alt="Logo TatoNephew" class="tatophew_logo_verificar">
+            <nav class="button-container">
+                <a href="cadastro.html" class="cadastrar-btn">Cadastre-se</a>
+                <a href="login.html" class="login-btn">Logar-se</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h2>Verificar Código</h2>
+            <form action="processar_codigo.php" method="POST">
+                <div>
+                    <label for="codigo">Código de Verificação:</label>
+                    <input type="number" id="codigo" name="codigo" required>
+                </div>
+                <input type="hidden" name="email" value="<?php echo $_GET['email']; ?>">
+                <button type="submit">Verificar Código</button>
+            </form>
+        </main>
+        
+        <footer class="footer">
+            <p>© 2024 TatoNephew. Nós é computeiro</p>
+        </footer>
+    </div>
+</body>
+</html>
